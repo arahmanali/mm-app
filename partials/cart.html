@@ -1,0 +1,21 @@
+<br/>
+<div class="container">
+    <table class="table table-responsive">
+        <thead>
+        <tr>
+            <th>Album ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="album in albums">
+            <td>{{album.albumID}}</td>
+            <td>{{album.title}}</td>
+            <td>{{album.price | currency}}</td>
+            <td><a href="" ng-click="removeItem($index)">Remove</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

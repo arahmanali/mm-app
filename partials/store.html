@@ -1,0 +1,57 @@
+<!-- Search Bar -->
+
+<div class="container">
+    <div class="pull-right controls controls-row">
+        <table>
+            <tr>
+                <td>
+                <input type="search" class="form-control" placeholder="Search" ng-model='query[queryBy]'>
+                </td>
+            </tr>
+            <tr>
+                <td><label>
+                    <select class="dropdown dropdown-header" ng-model="queryBy">
+                        <option value="$">Search by</option>
+                        <option value="title">Album</option>
+                        <option value="artist">Artist</option>
+                        <option value="price">Price</option>
+                    </select>
+                </label></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br>
+<!--Store Albums List-->
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th><u><a href="" ng-click="predicate = 'albumID'; reverse=!reverse">Album ID</a></u></th>
+      <th><u><a href="" ng-click="predicate = 'title'; reverse=!reverse">Album</a></u></th>
+      <th><u><a href="" ng-click="predicate = 'artist'; reverse=!reverse">Artist</a></u></th>
+      <th><u><a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a></u></th>
+      <th>Purchase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="album in albums | filter:query | orderBy:predicate:!reverse">
+      <td ng-model="album.albumID">
+          {{album.albumID}}
+      </td>
+      <td  ng-model="album.title">
+        <a ng-href="#/store/{{album.title}}">
+          {{album.title}}
+        </a>
+      </td>
+      <td>
+          {{album.artist}}
+      </td>
+      <td ng-model="album.price">
+          {{album.price | currency}}
+      </td>
+        <td>
+            <a href="" type="Button" ng-click="addCart(album)">Add to Cart</a>
+        </td>
+    </tr>
+  </tbody>
+</table>

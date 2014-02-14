@@ -1,0 +1,12 @@
+<div>
+	<h3>{{currentAlbum.title}}</h3>
+	<dl>		
+		<dd><b>{{tableHeads.title}}</b>&nbsp;{{currentAlbum.title}}</dd>
+		<dd><b>{{tableHeads.albumID}}</b>&nbsp;{{currentAlbum.albumID}}</dd>
+		<dd><b>{{tableHeads.artist}}</b>&nbsp;{{currentAlbum.artist}}</dd>
+		<dd><b>{{tableHeads.year}}</b>&nbsp;{{currentAlbum.year}}</dd>
+		<dd><b>{{tableHeads.genre}}</b>&nbsp;{{currentAlbum.genre}}</dd>
+		<dd><b>{{tableHeads.price}}</b>&nbsp;{{currentAlbum.price | currency}}</dd>
+	</dl>
+    <a href="" ng-click="addCart(album)">Add to Cart</a>
+</div>
