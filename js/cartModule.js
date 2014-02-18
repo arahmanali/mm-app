@@ -2,16 +2,16 @@ var cartModule = angular.module('cartModule', ['storeModule']);
 
     //Registering Cart Services
     cartModule.factory('CartService',function() {
-        return CartSrvc = {
+        return {
             counter : 0,
             cartAlbums : [],
             AddCart : function(album){
-                CartSrvc.counter++;
-                CartSrvc.cartAlbums.push(album);
+                this.counter++;
+                this.cartAlbums.push(album);
             },
             RemoveCart : function(index){
-                CartSrvc.cartAlbums.splice(index,1);
-                CartSrvc.counter--;
+                this.counter--;
+                this.cartAlbums.splice(index,1);
             }
         }
     });
@@ -23,6 +23,7 @@ var cartModule = angular.module('cartModule', ['storeModule']);
         //Using Store Services from Another Module
         $scope.albums = StoreService.allAlbums;
         //Total Cart Amount
+        $scope.chargesTax = 0.5;
         $scope.totalPrice = function(){
             var total = 0;
             var num = 1;

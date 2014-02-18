@@ -23,19 +23,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cartModule.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="store.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/store.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="34" selection-start="1627" selection-end="1627" vertical-scroll-proportion="-10.181818" vertical-offset="72" max-vertical-offset="840">
+              <folding>
+                <element signature="tag#div#0" expanded="false" />
+                <element signature="tag#thead#0;tag#table#0;tag#div#1" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cartModule.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cartModule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="24" selection-start="910" selection-end="910" vertical-scroll-proportion="0.7364017" vertical-offset="120" max-vertical-offset="936">
+            <state line="25" column="32" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cart.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="29" selection-start="882" selection-end="882" vertical-scroll-proportion="-13.454545" vertical-offset="204" max-vertical-offset="888">
+            <state line="42" column="13" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.71929824" vertical-offset="516" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -65,12 +77,12 @@
         <option value="$PROJECT_DIR$/css/bootstrap-theme.css" />
         <option value="$PROJECT_DIR$/15feb.html" />
         <option value="$PROJECT_DIR$/js/homeModule.js" />
-        <option value="$PROJECT_DIR$/partials/store.html" />
-        <option value="$PROJECT_DIR$/partials/currentAlbum.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/storeModule.js" />
-        <option value="$PROJECT_DIR$/partials/cart.html" />
+        <option value="$PROJECT_DIR$/partials/currentAlbum.html" />
+        <option value="$PROJECT_DIR$/partials/store.html" />
         <option value="$PROJECT_DIR$/js/cartModule.js" />
+        <option value="$PROJECT_DIR$/partials/cart.html" />
       </list>
     </option>
   </component>
@@ -160,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -248,7 +260,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1448" height="868" extended-state="7" />
+    <frame x="-4" y="-4" width="1448" height="868" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -512,37 +524,9 @@
         <state line="1" column="14" selection-start="35" selection-end="35" vertical-scroll-proportion="-0.0041841003" vertical-offset="27" max-vertical-offset="2256" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/homeModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2568">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="30" selection-start="290" selection-end="290" vertical-scroll-proportion="0.28614008" vertical-offset="0" max-vertical-offset="671">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/currentAlbum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="542" selection-end="542" vertical-scroll-proportion="0.3859649" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/store.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="25" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.2631579" vertical-offset="828" max-vertical-offset="1512">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="55" selection-start="2153" selection-end="2153" vertical-scroll-proportion="0.57228017" vertical-offset="648" max-vertical-offset="1632">
           <folding />
         </state>
       </provider>
@@ -556,16 +540,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/cart.html">
+    <entry file="file://$PROJECT_DIR$/partials/currentAlbum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="882" selection-end="882" vertical-scroll-proportion="-13.454545" vertical-offset="204" max-vertical-offset="888">
+        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/store.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="34" selection-start="1627" selection-end="1627" vertical-scroll-proportion="-10.181818" vertical-offset="72" max-vertical-offset="840">
+          <folding>
+            <element signature="tag#div#0" expanded="false" />
+            <element signature="tag#thead#0;tag#table#0;tag#div#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/homeModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="53" selection-start="340" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="2568">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="36" selection-start="2036" selection-end="2043" vertical-scroll-proportion="-7.2727275" vertical-offset="720" max-vertical-offset="1632">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cartModule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="24" selection-start="910" selection-end="910" vertical-scroll-proportion="0.7364017" vertical-offset="120" max-vertical-offset="936">
+        <state line="25" column="32" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="13" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.71929824" vertical-offset="516" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
