@@ -1,41 +1,34 @@
-angular.module('cartModule', [])
+var cartModule = angular.module('cartModule', ['storeModule']);
 
-    .run(function($rootScope) {
-        //Add to Cart Logic
-        $rootScope.counter = 0;
-        $rootScope.addCart = function(album) {
-            $rootScope.counter++;
-            $rootScope.albums.push(album);
-            $rootScope.album = {};
-        };
-    })
+    //Registering Cart Services
+    cartModule.factory('CartService',function() {
+        return CartSrvc = {
+            counter : 0,
+            cartAlbums : [],
+            AddCart : function(album){
+                CartSrvc.counter++;
+                CartSrvc.cartAlbums.push(album);
+            },
+            RemoveCart : function(index){
+                CartSrvc.cartAlbums.splice(index,1);
+                CartSrvc.counter--;
+            }
+        }
+    });
 
-    .controller('cartCtrl', function($scope)
+    cartModule.controller('cartCtrl', function($scope, CartService, StoreService)
     {
-
-        //Cart Page
-//        $scope.items = [
-//            {Name: "Soap", Price: "25", Quantity: "10"},
-//            {Name: "Shaving cream", Price: "50", Quantity: "15"},
-//            {Name: "Shampoo", Price: "100", Quantity: "5"}
-//        ];
-
-//        $scope.addAlbum = function(album) {
-//            $scope.albums.push(album);
-//            $scope.album = {};
-//        };
-
-//        $scope.removeItem = function(index){
-//            $scope.albums.splice(index,1);
-//        };
-
-//        $scope.totalPrice = function(){
-//            var total = 0;
-//            for(count=0;count<$scope.items.length;count++){
-//                total += $scope.albums[count].price*$scope.albums[count].Quantity;
-//            }
-//            return total;
-//        };
-//
-//
+        //Using Cart Services
+        $scope.cartService = CartService;
+        //Using Store Services from Another Module
+        $scope.albums = StoreService.allAlbums;
+        //Total Cart Amount
+        $scope.totalPrice = function(){
+            var total = 0;
+            var num = 1;
+            for(var count=0; count < $scope.cartService.cartAlbums.length; count++){
+                total += $scope.cartService.cartAlbums[count].price*num;
+            }
+            return total;
+        };
     });

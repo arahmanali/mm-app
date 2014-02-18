@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="cartCtrl">
 	<h3>{{currentAlbum.title}}</h3>
 	<dl>		
 		<dd><b>{{tableHeads.title}}</b>&nbsp;{{currentAlbum.title}}</dd>
@@ -8,5 +8,7 @@
 		<dd><b>{{tableHeads.genre}}</b>&nbsp;{{currentAlbum.genre}}</dd>
 		<dd><b>{{tableHeads.price}}</b>&nbsp;{{currentAlbum.price | currency}}</dd>
 	</dl>
-    <a href="" ng-click="addCart(album)">Add to Cart</a>
+    <div>
+    <a href="" ng-click="cartService.AddCart(currentAlbum)">Add to Cart</a>
+    </div>
 </div>

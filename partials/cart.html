@@ -1,5 +1,9 @@
 <br/>
-<div class="container">
+<div ng-controller="cartCtrl" ng-hide="cartService.cartAlbums">
+    <h3 class="text-center">Please! Add albums to cart from store</h3>
+</div>
+
+<div class="container" ng-controller="cartCtrl" ng-show="cartService.cartAlbums">
     <table class="table table-responsive">
         <thead>
         <tr>
@@ -9,12 +13,19 @@
             <th></th>
         </tr>
         </thead>
+        <tbody ng-repeat="cartAlbum in cartService.cartAlbums">
+        <tr>
+            <td>{{cartAlbum.albumID}}</td>
+            <td>{{cartAlbum.title}}</td>
+            <td>{{cartAlbum.price | currency}}</td>
+            <td><a href="" ng-click="cartService.RemoveCart(index)">Remove</a></td>
+        </tr>
+        </tbody>
         <tbody>
-        <tr ng-repeat="album in albums">
-            <td>{{album.albumID}}</td>
-            <td>{{album.title}}</td>
-            <td>{{album.price | currency}}</td>
-            <td><a href="" ng-click="removeItem($index)">Remove</a></td>
+        <tr>
+            <td><b>Total</b></td>
+            <td></td>
+            <td>{{totalPrice() | currency}}</td>
         </tr>
         </tbody>
     </table>

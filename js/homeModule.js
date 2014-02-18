@@ -1,7 +1,7 @@
-angular.module('homeModule', ['ngRoute','storeModule','cartModule'])
+var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModule']);
 
     //routing
-	.config(function ($routeProvider) {
+    homeModule.config(function ($routeProvider) {
 		$routeProvider
 			.when('/', 
 				{
@@ -22,9 +22,9 @@ angular.module('homeModule', ['ngRoute','storeModule','cartModule'])
                 templateUrl: 'partials/warning.html'
             })
 
-	})
+	});
 
-	.controller("homeCtrl", function ($scope, $location){
+    homeModule.controller("homeCtrl", function ($scope, $location){
         var scope = $scope;
 
         //home page's current selected Album
