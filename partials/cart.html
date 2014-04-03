@@ -1,10 +1,10 @@
 <br/>
-<div ng-controller="cartCtrl" ng-hide="cartService.cartAlbums">
+<div class="container col-xs-12"  ng-controller="cartCtrl" ng-hide="cartService.cartAlbums.length">
     <h5>Sorry! Your cart is empty.</h5>
     <h5>Return to the <a href="#/store">Store</a> to buy.</h5>
 </div>
 
-<div class="container" ng-controller="cartCtrl" ng-show="cartService.cartAlbums">
+<div class="container col-xs-12" ng-controller="cartCtrl" ng-show="cartService.cartAlbums.length">
     <table class="table table-responsive">
         <thead>
         <tr>
@@ -15,7 +15,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr  ng-repeat="cartAlbum in cartService.cartAlbums track by $index">
+        <tr ng-repeat="cartAlbum in cartService.cartAlbums track by $index">
             <td>{{cartAlbum.albumID}}</td>
             <td>{{cartAlbum.title}}</td>
             <td>{{cartAlbum.price | currency}}</td>

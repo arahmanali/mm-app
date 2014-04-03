@@ -24,16 +24,24 @@ var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModu
 
 	});
 
-    homeModule.controller("homeCtrl", function ($scope, $location){
+    //Registering Home Sevices
+    homeModule.factory('HomeService', function(){
+        return {
+            //home page's current selected Album
+            currentAlbum : null,
+            sidebarURL : "partials/currentAlbum.html",
+            setAlbum : function(album){
+                this.currentAlbum = album;
+            }
+        }
+    });
+
+    homeModule.controller("homeCtrl", function ($scope, $location, StoreService, HomeService){
         var scope = $scope;
 
-        //home page's current selected Album
-        scope.currentAlbum = null;
-        scope.sidebarURL = "partials/currentAlbum.html";
-        scope.setAlbum = function(id){
-            scope.currentAlbum = scope.albums[id];
-        };
-
+        scope.albums = StoreService.allAlbums;
+        scope.homeService = HomeService;
+        
         //Warning page's path definition
         scope.$watch('locationPath', function(path) {
         $location.path(path);
@@ -54,49 +62,5 @@ var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModu
             year : "Year",
             genre : "Genre",
             price : "Price"
-        };
-
-        //albums object
-        scope.albums = {
-            '001':{
-                "albumID":"001",
-                "title":"Konkrete",
-                "artist":"Akon",
-                "year":"2012",
-                "genre":"Hip-Hop",
-                "price":"1.89"
-            },
-            '002':{
-                "albumID":"002",
-                "title":"Recovery",
-                "artist":"Eminem",
-                "year":"2010",
-                "genre":"Hip-Hop",
-                "price":"2.10"
-            },
-            '003':{
-                "albumID":"003",
-                "title":"Euphoria",
-                "artist":"Enrique",
-                "year":"2010",
-                "genre":"Pop",
-                "price":"1.54"
-            },
-            '004':{
-                "albumID":"004",
-                "title":"Shock Value",
-                "artist":"Timbaland",
-                "year":"2007",
-                "genre":"Rap",
-                "price":"2.30"
-            },
-            '005':{
-                "albumID":"005",
-                "title":"The Lost Tape",
-                "artist":"50 Cent",
-                "year":"2012",
-                "genre":"Other",
-                "price":"1.45"
-            }
         };
     });

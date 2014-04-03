@@ -3,13 +3,14 @@ var storeModule = angular.module('storeModule', []);
     //Registering Store Services
     storeModule.factory('StoreService',function() {
         return {
-            allAlbums : [ {
-                    "albumID":"001",
-                    "title":"Konkrete",
-                    "artist":"Akon",
-                    "year":"2012",
-                    "genre":"Hip-Hop",
-                    "price": 1.89
+            allAlbums : [
+                {
+                    albumID:"001",
+                    title:"Konkrete",
+                    artist:"Akon",
+                    year:"2012",
+                    genre:"Hip-Hop",
+                    price: 1.89
                 },
                 {
                     "albumID":"002",

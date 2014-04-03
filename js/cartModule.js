@@ -18,11 +18,11 @@ var cartModule = angular.module('cartModule', ['storeModule']);
 
     cartModule.controller('cartCtrl', function($scope, CartService, StoreService)
     {
-        //Using Cart Services
+        //Using Own Cart Services
         $scope.cartService = CartService;
         //Using Store Services from Another Module
         $scope.albums = StoreService.allAlbums;
-        //Total Cart Amount
+        //Total of Cart Amount
         $scope.chargesTax = 0.5;
         $scope.totalPrice = function(){
             var total = 0;
