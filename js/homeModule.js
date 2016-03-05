@@ -5,15 +5,7 @@ var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModu
 		$routeProvider
 			.when('/', 
 			{
-                templateUrl: function  () {
-                    if (window.location.hostname == 'rawgit.com') {
-
-                        return 'partials/live.html';
-                    }else{
-
-                        return 'partials/home.html';
-                    }
-                },
+                templateUrl: 'partials/home.html',
                 controller: 'homeCtrl'
 			})
 			.when('/store', 
@@ -53,7 +45,7 @@ var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModu
         
         //Warning page's path definition
         scope.$watch('locationPath', function(path) {
-        $location.path(path);
+            $location.path(path);
         });
         scope.$watch(function() {
             return $location.path();
