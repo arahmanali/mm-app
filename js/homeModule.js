@@ -4,19 +4,27 @@ var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModu
     homeModule.config(function ($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', 
-				{
-                    templateUrl: 'partials/home.html',
-                    controller: 'homeCtrl'
-				})
+			{
+                templateUrl: function  () {
+                    if (window.location.hostname == 'rawgit.com') {
+
+                        return 'partials/live.html';
+                    }else{
+
+                        return 'partials/home.html';
+                    }
+                },
+                controller: 'homeCtrl'
+			})
 			.when('/store', 
-				{
-					templateUrl: 'partials/store.html',
-					controller: 'storeCtrl'
-				})
+			{
+				templateUrl: 'partials/store.html',
+				controller: 'storeCtrl'
+			})
 			.when('/cart', 
-				{
-                    templateUrl: 'partials/cart.html'
-				})
+			{
+                templateUrl: 'partials/cart.html'
+			})
             .otherwise(
             {
                 templateUrl: 'partials/warning.html'
