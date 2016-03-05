@@ -23,36 +23,36 @@
 <br>
 <!--Store Albums List-->
 <div class="container col-xs-12">
-<table class="table table-responsive ">
-  <thead>
-    <tr>
-      <th><u><a href="" ng-click="predicate = 'albumID'; reverse=!reverse">Album ID</a></u></th>
-      <th><u><a href="" ng-click="predicate = 'title'; reverse=!reverse">Album</a></u></th>
-      <th><u><a href="" ng-click="predicate = 'artist'; reverse=!reverse">Artist</a></u></th>
-      <th><u><a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a></u></th>
-      <th>Purchase</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="album in albums | filter:query | orderBy:predicate:!reverse">
-      <td ng-model="album.albumID">
-          {{album.albumID}}
-      </td>
-      <td  ng-model="album.title">
-        <a ng-href="#/store/{{album.title}}">
-          {{album.title}}
-        </a>
-      </td>
-      <td ng-model="album.artist">
-          {{album.artist}}
-      </td>
-      <td ng-model="album.price">
-          {{album.price | currency}}
-      </td>
-        <td ng-controller="cartCtrl">
-            <a href="" type="Button" ng-click="cartService.AddCart(album)">Add to Cart</a>
+  <table class="table table-responsive ">
+    <thead>
+      <tr>
+        <th><u><a href="" ng-click="predicate = 'albumID'; reverse=!reverse">Album ID</a></u></th>
+        <th><u><a href="" ng-click="predicate = 'title'; reverse=!reverse">Album</a></u></th>
+        <th><u><a href="" ng-click="predicate = 'artist'; reverse=!reverse">Artist</a></u></th>
+        <th><u><a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a></u></th>
+        <th>Purchase</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="album in albums | filter:query | orderBy:predicate:!reverse">
+        <td ng-model="album.albumID">
+            {{album.albumID}}
         </td>
-    </tr>
-  </tbody>
-</table>
+        <td  ng-model="album.title">
+          <a ng-href="#/store/{{album.title}}">
+            {{album.title}}
+          </a>
+        </td>
+        <td ng-model="album.artist">
+            {{album.artist}}
+        </td>
+        <td ng-model="album.price">
+            {{album.price | currency}}
+        </td>
+          <td ng-controller="cartCtrl">
+              <a href="" type="Button" ng-click="cartService.AddCart(album)">Add to Cart</a>
+          </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

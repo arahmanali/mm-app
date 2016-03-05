@@ -1,7 +1,7 @@
 var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModule']);
 
     //routing
-    homeModule.config(function ($routeProvider, $locationProvider) {
+    homeModule.config(function ($routeProvider) {
 		$routeProvider
 			.when('/', 
 				{
@@ -20,11 +20,9 @@ var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModu
             .otherwise(
             {
                 templateUrl: 'partials/warning.html'
-            });
-
+            })
         // use the HTML5 History API
         $locationProvider.html5Mode(true);
-
 	});
 
     //Registering Home Sevices

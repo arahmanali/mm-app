@@ -8,7 +8,6 @@ var cartModule = angular.module('cartModule', ['storeModule']);
             AddCart : function(album){
                 this.counter++;
                 this.cartAlbums.push(album);
-                this.cartAlbums.indexOf(album);
             },
             RemoveCart : function(index){
                 this.counter--;
