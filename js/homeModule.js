@@ -1,7 +1,7 @@
 var homeModule = angular.module('homeModule', ['ngRoute','storeModule','cartModule']);
 
     //routing
-    homeModule.config(function ($routeProvider) {
+    homeModule.config(function ($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', 
 				{
