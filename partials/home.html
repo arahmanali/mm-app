@@ -1,0 +1,18 @@
+<!-- Left Top Five Panel -->
+<div class="col-md-5 col-xs-12 border-right" ng-controller="homeCtrl">
+    <h3>Top Five Albums</h3>
+	<dl ng-repeat="album in albums | limitTo: 5" >
+		<hr/>
+        <dd class="container">
+            <a href="" ng-click="homeService.setAlbum(album)">{{album.title}}</a>
+        </dd>
+        <dd class="container">
+            {{album.artist}}
+        </dd>
+	</dl>
+</div>
+
+<!-- Right Current Album Panel -->
+<div class="col-md-4 col-xs-12 col-md-offset-2 modal-content modal-body" ng-show="homeService.currentAlbum"
+     ng-include src="homeService.sidebarURL">
+</div>

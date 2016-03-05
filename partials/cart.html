@@ -1,0 +1,46 @@
+<br/>
+<div class="container col-xs-12"  ng-controller="cartCtrl" ng-hide="cartService.cartAlbums.length">
+    <h5>Sorry! Your cart is empty.</h5>
+    <h5>Return to the <a href="#/store">Store</a> to buy.</h5>
+</div>
+
+<div class="container col-xs-12" ng-controller="cartCtrl" ng-show="cartService.cartAlbums.length">
+    <table class="table table-responsive">
+        <thead>
+        <tr>
+            <th>Album ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Remove Item</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="cartAlbum in cartService.cartAlbums track by $index">
+            <td>{{cartAlbum.albumID}}</td>
+            <td>{{cartAlbum.title}}</td>
+            <td>{{cartAlbum.price | currency}}</td>
+            <td><a href="" ng-click="cartService.RemoveCart($index)">Remove</a></td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <td>Total price</td>
+            <td></td>
+            <td>{{totalPrice() | currency}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Shipping charges</td>
+            <td></td>
+            <td>{{chargesTax | currency}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><b>Final order amount</b></td>
+            <td></td>
+            <td><b>{{totalPrice() + chargesTax | currency}}</b></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
